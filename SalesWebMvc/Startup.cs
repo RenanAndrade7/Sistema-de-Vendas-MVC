@@ -61,7 +61,6 @@ namespace SalesWebMvc
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            seedingService.Seed();
 
             app.UseMvc(routes =>
             {
