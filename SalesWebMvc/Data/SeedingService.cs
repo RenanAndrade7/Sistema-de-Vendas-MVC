@@ -9,7 +9,7 @@ namespace SalesWebMvc.Data
 {
     public class SeedingService
     {
-        private SalesWebMvcContext _context;
+        private readonly SalesWebMvcContext _context;
 
         public SeedingService(SalesWebMvcContext context)
         {
@@ -18,10 +18,10 @@ namespace SalesWebMvc.Data
 
         public void Seed()
         {
-            if(_context.Department.Any() || _context.Seller.Any() || _context.SalesRecord.Any())
+             if(_context.Department.Any() || _context.Seller.Any() || _context.SalesRecord.Any())
             {
                 return; // O Banco de Dados já foi populado
-            }
+            } 
 
             Department d1 = new Department(1,"Computers");
             Department d2 = new Department(2, "Electronics");
@@ -29,7 +29,7 @@ namespace SalesWebMvc.Data
             Department d4 = new Department(4, "Books");
 
             Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
-            Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com", new DateTime(1979, 21, 31), 1000.0, d2);
+            Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com", new DateTime(1979, 5, 31), 1000.0, d2);
             Seller s3 = new Seller(3, "Alex Grey", "alex@gmail.com", new DateTime(1998, 1, 15), 1000.0, d1);
             Seller s4 = new Seller(4, "Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 1000.0, d4);
             Seller s5 = new Seller(5, "Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 1000.0, d3);
