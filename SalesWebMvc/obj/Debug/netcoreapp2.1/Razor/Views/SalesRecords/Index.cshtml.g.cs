@@ -76,7 +76,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n<h1> ");
             EndContext();
             BeginContext(85, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce9c6f4bb2c24138b84619573d4299f1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0bf31a3746148d1ab0845cae5b5514e", async() => {
                 BeginContext(132, 8, true);
                 WriteLiteral(" Create ");
                 EndContext();
@@ -99,7 +99,7 @@ Write(ViewData["Title"]);
             WriteLiteral(" </h1>\r\n<div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n        ");
             EndContext();
             BeginContext(207, 1036, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26d73abbf1cb45ffaa314dfce621737e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2fb4185a288412e8b0c6463fc9e000c", async() => {
                 BeginContext(263, 973, true);
                 WriteLiteral(@"
             <fieldset>
@@ -145,7 +145,7 @@ Write(ViewData["Title"]);
             WriteLiteral("\r\n    </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n        ");
             EndContext();
             BeginContext(1322, 1040, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "830d426e979c4b16a49c3f869c8b5171", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8962ab8dd26043989e6acb5e123b50d6", async() => {
                 BeginContext(1380, 975, true);
                 WriteLiteral(@"
             <fieldset>

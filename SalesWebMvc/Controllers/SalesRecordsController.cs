@@ -29,6 +29,7 @@ namespace SalesWebMvc.Controllers
         public async Task<IActionResult> Create()
         {
             var seller = await _sellerService.FindAllAsync();
+
             return View(seller);
         }
         public async Task<IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)

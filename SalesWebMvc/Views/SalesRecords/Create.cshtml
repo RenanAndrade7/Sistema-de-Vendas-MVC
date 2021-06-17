@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<SalesWebMvc.Models.Seller>
 
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"]="Create" ;
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -16,20 +15,26 @@
             <th>
                 @Html.DisplayNameFor(model => model.DepartmentId)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sales)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <th>
-                    @Html.DisplayFor(modelItem => item.DepartmentId)
-                </th>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.DepartmentId)
+            </th>
+            <td>
+                <h1>Teste</h1>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
