@@ -11,14 +11,10 @@ namespace SalesWebMvc.Controllers
     public class SalesRecordsController : Controller
     {
         private readonly SalesRecordService _salesRecordService;
-        private readonly SellerService _sellerService;
-        private readonly DepartmentService _departmentService;
 
         public SalesRecordsController(SalesRecordService salesRecordService, SellerService sellerService, DepartmentService departmentService)
         {
             _salesRecordService = salesRecordService;
-            _sellerService = sellerService;
-            _departmentService = departmentService;
         }
 
         public IActionResult Index()
@@ -26,12 +22,6 @@ namespace SalesWebMvc.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Create()
-        {
-            var seller = await _sellerService.FindAllAsync();
-
-            return View(seller);
-        }
         public async Task<IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)
         {
             if(!minDate.HasValue)

@@ -46,4 +46,3 @@ C:\Users\renan\OneDrive\Área de Trabalho\Renan\Projetos\SalesWebMvc\SalesWebMvc
 C:\Users\renan\OneDrive\Área de Trabalho\Renan\Projetos\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\Index.cshtml.g.cs
 C:\Users\renan\OneDrive\Área de Trabalho\Renan\Projetos\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\SimpleSearch.cshtml.g.cs
 C:\Users\renan\OneDrive\Área de Trabalho\Renan\Projetos\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\GroupingSearch.cshtml.g.cs
-C:\Users\renan\OneDrive\Área de Trabalho\Renan\Projetos\SalesWebMvc\SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\SalesRecords\Create.cshtml.g.cs
