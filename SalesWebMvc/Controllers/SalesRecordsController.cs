@@ -5,22 +5,59 @@ using System.Linq;
 using System.Threading.Tasks;
 using SalesWebMvc.Services;
 using SalesWebMvc.Models.ViewModels;
+using SalesWebMvc.Models.Enums;
+using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
     public class SalesRecordsController : Controller
     {
         private readonly SalesRecordService _salesRecordService;
+        private readonly SellerService _sellerService;
 
-        public SalesRecordsController(SalesRecordService salesRecordService, SellerService sellerService, DepartmentService departmentService)
+        public SalesRecordsController(SalesRecordService salesRecordService, SellerService sellerService)
         {
             _salesRecordService = salesRecordService;
+            _sellerService = sellerService;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
+        public async Task<IActionResult> Create()
+        {
+            var list = await _sellerService.FindAllAsync();
+            var obj = new SalesFormViewModel
+            {
+                Sellers = list,
+                SalesStatus = Enum.GetValues(typeof(SaleStatus)).Cast<SaleStatus>().Select(en => new ItemEnumStatus
+                {
+                    Indice = (int)en,
+                    Texto = en.ToString()
+                }).ToList()
+            };
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(SalesFormViewModel sale)
+        {
+            var objSale = new SalesRecord
+            {
+                Status = (SaleStatus)sale.Status,
+                Date = sale.DateSales,
+                Seller = _sellerService.FindByIdAsync(sale.Seller).Result,
+                Amount = sale.Amount
+            };
+
+            await _salesRecordService.InsertAsync(objSale);
+            return RedirectToAction(nameof(Index));
+        }
+
+
 
         public async Task<IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)
         {
